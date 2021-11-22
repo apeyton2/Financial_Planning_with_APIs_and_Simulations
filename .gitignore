@@ -1,59 +1,4 @@
-# Visual Studio Code
-.vscode/*
-.vscode/settings.json
-.vscode/tasks.json
-.vscode/launch.json
-.vscode/extensions.json
-*.code-workspace
-
-# Custom temp file
-deleteme
-
-# Executables (chromedriver.exe)
-*.exe
-
-# Word temporary
-~$*.doc*
-
-# Excel temporary
-~$*.xls*
-
-# Excel Backup File
-*.xlk
-
-# PowerPoint temporary
-~$*.ppt*
-
-# PowerPoint Files
-*.pptx
-*.ppt
-
-# Visio autosave temporary files
-*.~vsd*
-
-# nbgrader database file
-gradebook.db
-
-# Floydhub
-.floyd*
-
-# .DS_Store
-.DS_Store
-
-# Idea
-.idea
-
-# PySpark
-metastore/
-metastore_db/
-
-# Jupyter Checkpoints
-
-.ipynb_checkpoints
-*/.ipynb_checkpoints/*
-
 # Byte-compiled / optimized / DLL files
-.pytest_cache/
 __pycache__/
 *.py[cod]
 *$py.class
@@ -63,7 +8,6 @@ __pycache__/
 
 # Distribution / packaging
 .Python
-env/
 build/
 develop-eggs/
 dist/
@@ -75,9 +19,13 @@ lib64/
 parts/
 sdist/
 var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
 *.egg-info/
 .installed.cfg
 *.egg
+MANIFEST
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
@@ -92,13 +40,16 @@ pip-delete-this-directory.txt
 # Unit test / coverage reports
 htmlcov/
 .tox/
+.nox/
 .coverage
 .coverage.*
 .cache
 nosetests.xml
 coverage.xml
-*,cover
+*.cover
+*.py,cover
 .hypothesis/
+.pytest_cache/
 
 # Translations
 *.mo
@@ -107,6 +58,8 @@ coverage.xml
 # Django stuff:
 *.log
 local_settings.py
+db.sqlite3
+db.sqlite3-journal
 
 # Flask stuff:
 instance/
@@ -121,30 +74,56 @@ docs/_build/
 # PyBuilder
 target/
 
-# IPython Notebook
+# Jupyter Notebook
 .ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
 
 # pyenv
 .python-version
 
-# celery beat schedule file
+# pipenv
+#   According to pypa/pipenv#598, it is recommended to include Pipfile.lock in version control.
+#   However, in case of collaboration, if having platform-specific dependencies or dependencies
+#   having no cross-platform support, pipenv may install dependencies that don't work, or not
+#   install all needed dependencies.
+#Pipfile.lock
+
+# PEP 582; used by e.g. github.com/David-OConnor/pyflow
+__pypackages__/
+
+# Celery stuff
 celerybeat-schedule
+celerybeat.pid
 
-# dotenv
+# SageMath parsed files
+*.sage.py
+
+# Environments
 .env
-
-# virtualenv
+.venv
+env/
 venv/
 ENV/
+env.bak/
+venv.bak/
 
 # Spyder project settings
 .spyderproject
+.spyproject
 
 # Rope project settings
 .ropeproject
 
-# Node project dependencies and settings
-node_modules/
+# mkdocs documentation
+/site
 
-# .Rhistory files
-.Rhistory
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
